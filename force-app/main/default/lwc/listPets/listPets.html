@@ -1,0 +1,19 @@
+<template>
+    
+    <lightning-card title="List Of Pets">
+        <template if:true={listPets}>
+            <div style="display: flex; flex-wrap: wrap; flex-direction: row;">
+                <template for:each={listPets.data} for:item="pet">
+                    <div key={pet.Photo}>
+                        <c-pet pet={pet} onselectedpet={selectedPet}></c-pet>
+                    </div> 
+                </template>
+            </div>
+        </template>
+    </lightning-card>
+
+    <template if:false={listPets}>
+        false
+    </template>
+
+</template>

@@ -1,0 +1,31 @@
+<aura:component implements="flexipage:availableForAllPageTypes" access="public">
+    <aura:attribute name="record" type="Pet__c"  />
+    <lightning:messageChannel type="sendPetRecord__c" onMessage="{!c.handleMessage}" />
+
+    <lightning:card title="Detail">
+        <div class="slds-box detail">
+            <div class="slds-form-element">
+                <label class="slds-form-element__label" for="Name">Name</label>
+                <div class="slds-form-element__control">
+                    <p>{! v.record.Name}</p>
+                </div>
+
+                <label class="slds-form-element__label" for="Gender">Gender</label>
+                <div class="slds-form-element__control">
+                    <p>{! v.record.Gender}</p>
+                </div>
+
+                <label class="slds-form-element__label" for="Age">Age</label>
+                <div class="slds-form-element__control">
+                    <p>{! v.record.Age}</p>
+                </div>
+
+                <label class="slds-form-element__label" for="Description">Description</label>
+                <div class="slds-form-element__control">
+                    <p>{! v.record.Description}</p>
+                </div>
+            </div>
+        </div>
+    </lightning:card>
+
+</aura:component>

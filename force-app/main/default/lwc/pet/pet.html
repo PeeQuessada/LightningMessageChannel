@@ -1,0 +1,16 @@
+<template>
+
+    <button class="pet" onclick={selectedPet}>
+        <template if:true={pet}>
+            <template if:true={imageUrl}>
+                <img src={imageUrl} />
+            </template>
+            <h2>{pet.Name}</h2>
+        </template>
+    </button>
+
+    <template if:false={pet}>
+        false pet
+    </template>
+
+</template>

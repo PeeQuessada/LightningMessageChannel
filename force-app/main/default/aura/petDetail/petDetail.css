@@ -1,0 +1,6 @@
+.THIS .detail {
+  margin: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
